@@ -1,12 +1,8 @@
 /* ============================================================
-   Service worker — étape 1 (minimal)
-   Precache app shell so the PWA opens offline.
-   data.json + thumbs caching gets added once those exist.
-   Bump CACHE on every deploy to invalidate old shell.
+   Service worker — prompt-lib
+   Precache app shell. network-first pour data.json + CDN.
    ============================================================ */
-
-const CACHE = "biblio-prompts-v1";
-
+const CACHE = "biblio-prompts-v2";
 const SHELL = [
   "./",
   "./index.html",
@@ -43,10 +39,13 @@ self.addEventListener("activate", (event) => {
   self.clients.claim();
 });
 
-// fetch: cache-first for shell, network-first for everything else (data.json later)
+// fetch
 self.addEventListener("fetch", (event) => {
   const { request } = event;
   if (request.method !== "GET") return;
+
+  // Laisser passer les requêtes externes (jsDelivr, CDN) sans interférer
+  if (!request.url.startsWith(self.location.origin)) return;
 
   const url = new URL(request.url);
   const isShell = SHELL.some((p) => url.pathname.endsWith(p.replace("./", "/")));
@@ -58,7 +57,7 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
-  // network-first, fall back to cache (good for data.json + thumbs)
+  // network-first, fall back to cache (data.json + thumbs)
   event.respondWith(
     fetch(request)
       .then((res) => {
