@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prompt Lib — Mobile</title>
+  <link rel="manifest" href="mobile-manifest.json" />
+  <meta name="theme-color" content="#1a1612" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="stylesheet" href="css/mobile.css" />
+</head>
+<body>
+
+  <header class="mob-header">
+    <span class="mob-logo">▲ prompt-lib</span>
+    <span id="mob-count" class="mob-count"></span>
+  </header>
+
+  <div class="mob-toolbar">
+    <div class="mob-search-wrap">
+      <input
+        type="search"
+        id="mob-search"
+        class="mob-search"
+        placeholder="Rechercher…"
+        autocomplete="off"
+        autocorrect="off"
+        spellcheck="false"
+      />
+    </div>
+    <div class="mob-filters" id="mob-filters">
+      <button class="mob-chip mob-chip--active" data-type="">Tous</button>
+      <button class="mob-chip" data-type="prompt_texte">Texte</button>
+      <button class="mob-chip" data-type="prompt_image">Image</button>
+      <button class="mob-chip" data-type="tuto">Tuto</button>
+      <button class="mob-chip" data-type="skill">Skill</button>
+    </div>
+    <div class="mob-sort-wrap">
+      <select id="mob-sort" class="mob-sort">
+        <option value="date_desc">Plus récent</option>
+        <option value="date_asc">Plus ancien</option>
+        <option value="titre_asc">A → Z</option>
+      </select>
+    </div>
+  </div>
+
+  <main class="mob-list" id="mob-list" role="list">
+    <div class="mob-loading" id="mob-loading">Chargement…</div>
+  </main>
+
+  <!-- Modale de consultation -->
+  <div class="mob-modal" id="mob-modal" role="dialog" aria-modal="true" aria-label="Consultation" hidden>
+    <div class="mob-modal__backdrop" id="mob-modal-backdrop"></div>
+    <div class="mob-modal__panel">
+      <div class="mob-modal__header">
+        <span id="mob-modal-type" class="mob-badge"></span>
+        <h2 id="mob-modal-titre" class="mob-modal__titre"></h2>
+        <button class="mob-modal__close" id="mob-modal-close" aria-label="Fermer">✕</button>
+      </div>
+      <div class="mob-modal__tags" id="mob-modal-tags"></div>
+      <div class="mob-modal__body">
+        <pre id="mob-modal-contenu" class="mob-modal__contenu"></pre>
+      </div>
+      <div class="mob-modal__foot">
+        <button class="mob-btn mob-btn--accent" id="mob-modal-copy">Copier</button>
+        <span id="mob-modal-notes" class="mob-modal__notes"></span>
+      </div>
+    </div>
+  </div>
+
+  <div id="mob-toast" class="mob-toast" hidden></div>
+
+  <script src="js/mobile.js"></script>
+</body>
+</html>
