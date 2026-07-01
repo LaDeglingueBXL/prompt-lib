@@ -1,0 +1,103 @@
+{
+  "version": "1.0",
+  "exported_at": "2026-07-01T13:10:54.737Z",
+  "entries": [
+    {
+      "id": "25b0d4cd-25f2-4faa-a81f-d4e1611dfe29",
+      "titre": "Portrait cinématique — golden hour",
+      "contenu": "A close-up portrait of a woman, golden hour light, shallow depth of field, 85mm lens, cinematic color grading, Fujifilm simulation",
+      "type": "prompt_image",
+      "tags": [
+        "portrait",
+        "cinematic",
+        "midjourney"
+      ],
+      "notes": "Version avec filtre Fuji",
+      "thumb_path": "thumbs/abc123.jpg",
+      "date_creation": "2026-06-25T18:43:11.922287Z",
+      "parent_id": null
+    },
+    {
+      "id": "5b255892-0e10-4183-a8a4-bd0b9246a4a2",
+      "titre": "TEST FLUX 2026-07-01",
+      "contenu": "ping",
+      "type": "prompt_texte",
+      "tags": [],
+      "thumb_path": "",
+      "notes": "",
+      "parent_id": null,
+      "date_creation": "2026-07-01T13:06:50.657Z"
+    },
+    {
+      "id": "df7a978d-bebe-4eb6-8209-c7800b20db97",
+      "titre": "Résumé de texte long",
+      "contenu": "Tu es un assistant expert en synthèse. Résume le texte suivant en 5 points clés maximum, en conservant les nuances importantes :\n\n{texte}",
+      "type": "prompt_texte",
+      "tags": [
+        "résumé",
+        "synthèse",
+        "claude"
+      ],
+      "notes": "",
+      "thumb_path": "",
+      "date_creation": "2026-06-25T18:43:11.922309Z",
+      "parent_id": null
+    },
+    {
+      "id": "fa52f400-451a-4bcd-9d1c-88100715e2cc",
+      "titre": "Portrait cinématique v2 — bleu nuit",
+      "contenu": "A close-up portrait of a woman, blue night ambient light, shallow depth of field, 85mm lens",
+      "type": "prompt_image",
+      "tags": [
+        "portrait",
+        "cinematic",
+        "midjourney",
+        "variante"
+      ],
+      "notes": "Variante froide du portrait doré",
+      "thumb_path": "",
+      "date_creation": "2026-06-25T18:43:11.922323Z",
+      "parent_id": "← mettre ici l'UUID de la ligne précédente"
+    }
+  ],
+  "briques": [
+    {
+      "id": "15b1b8a8-3b14-4161-8b40-267a8b6eafbf",
+      "categorie": "ambiance",
+      "valeur": "golden hour warm light, soft shadows",
+      "tags": [
+        "lumière",
+        "ambiance",
+        "chaud"
+      ]
+    },
+    {
+      "id": "79f66389-6cb0-4987-9110-67bc09af3a37",
+      "categorie": "qualité",
+      "valeur": "sharp focus, highly detailed, 8K resolution",
+      "tags": [
+        "qualité",
+        "résolution"
+      ]
+    },
+    {
+      "id": "7ce825fe-aaef-4461-b2c4-82cabe2a2c05",
+      "categorie": "style",
+      "valeur": "cinematic color grading",
+      "tags": [
+        "cinematic",
+        "couleur"
+      ]
+    },
+    {
+      "id": "b518d149-d14f-42dc-bcad-326fcaebbd5d",
+      "categorie": "sujet",
+      "valeur": "a lone astronaut on a red desert planet",
+      "tags": [
+        "sujet",
+        "scifi",
+        "espace"
+      ]
+    }
+  ]
+}
